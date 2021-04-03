@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <form  method="POST">
+        <div>
             <label name="lbUserName" for="username">Username</label>
             <input name="txtUsername" id="txtUsername" type="text">
             <label name="lbPassword" for="password">Password</label>
             <input name="txtPassword" type="password">
-            <button type="submit" onclick="login()">Login</button>
-        </form>
+            <button onclick="login()">Login</button>
+        </div>
     </body>
     <script type="text/javascript">
-    function login(){
-        var username = document.getElementsByName("txtUsername")[0].value;
-        var password = document.getElementsByName("txtPassword")[0].value;
-        if(username=="admin" && password=="admin"){
-            alert("Đăng nhập thành công");
+        function login(){
+            var username = document.getElementsByName("txtUsername")[0].value;
+            var password = document.getElementsByName("txtPassword")[0].value;
+            if(username=="admin" && password=="admin"){
+                window.open("home.html", "_self")
+            }
+            else{
+                alert(username+ " - "+ password);
+            }
         }
-        else{
-            alert(username+ " - "+ password);
-        }
-    }
-        
-
     </script>
 </html>
